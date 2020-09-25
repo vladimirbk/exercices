@@ -18,16 +18,18 @@
 
 //Chessboard
 let size = 8;
-let j = '#';
+let j = ' ';
 
 while (j.length <= Math.pow(size,2)) {
     if (j.length % 9 === 0) {
         j += '\n';
-    } else if (j.length % 2 === 0) {
-        j += '#'
-    } else {
-        j += ' ';
     }
+
+    if (j.length % 2 === 0) { 
+        j += ' '; 
+    } else {
+        j += '#';
+    } 
 }
 
 console.log(j);

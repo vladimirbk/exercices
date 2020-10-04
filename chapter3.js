@@ -26,3 +26,33 @@ function testEven(num) {
         testEven(num - 2);
     }
 }
+
+//Bean counting
+
+
+//Count Bs function
+let countBs = (text) => {
+    let numOfB = 0;
+    for(let counter = 0; counter < text.length; counter++){
+        if(text[counter] === 'B'){
+            numOfB += 1;
+        }
+    }
+    return numOfB;
+};
+
+//Count Characters function
+let countChar = (text, char) => {
+    let numOfChar = 0;
+    for(let counter = 0; counter < text.length; counter++){
+        if(text[counter] === char){
+            numOfChar += 1;
+        }
+    }
+    return numOfChar;
+};
+
+//Count Bs v.2 (based on countChar function)
+function countBs(text){
+    return countChar(text, 'B');
+}

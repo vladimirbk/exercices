@@ -1,3 +1,5 @@
+//The Sum of Range
+
 function range(num1, num2){
     let range = [];
     for(let x = num1; x <= num2; x++){
@@ -28,6 +30,25 @@ function rangeModified(num1, num2, incrementNum = num1 > num2 ? -1 : 1){
             range.push(x)
         }
     }
-    console.log(range)
     return range;
 }
+
+//Reversing an array
+
+function reverseArray(array) {
+    let reversedArray = [];
+    for (let lengthOfArray = array.length - 1; lengthOfArray >= 0; lengthOfArray -= 1){
+        reversedArray.push(array[lengthOfArray]);
+    }
+
+    return reversedArray;
+}
+
+function reverseArrayInPlace(array) {
+    for (let i = 0; i < Math.floor(array.length / 2); i++) {
+      let oldElement = array[i];
+      array[i] = array[array.length - 1 - i];
+      array[array.length - 1 - i] = oldElement;
+    }
+    return array;
+  }
